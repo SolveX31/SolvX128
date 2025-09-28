@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <div class="logo-container">
+                <img src="./ecovision.png" alt="Ecovision Logo">
+                <div>
+                    <h1>Ecovision</h1>
+                    <p class="tagline">Segregate Today, Sustain Tomorrow</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="report-segregate.html">Report & Segregate</a></li>
+                    <li><a href="login.html" class="button active " style="color: white;">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-container">
+        <div class="form-switcher">
+            <div class="login-box" id="loginBox">
+                <h2 style="color: green;">User Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-user"></i> Email/Username:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="button" style="background-color:green;">Login</button>
+                </form>
+                <p style="margin-top: 15px;">
+                    <a href="#" style="color: green; text-decoration: none;">Forgot Password?</a>
+                </p>
+                <p style="margin-top: 20px;">
+                    New to Ecovision? <a href="#" style="color: green; text-decoration: none; font-weight: bold;" id="showRegister">Register Here</a>
+                </p>
+                <p id="loginMessage" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
+
+            <div class="login-box hidden" id="registerBox">
+                <h2 style="color: green;">User Registration</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regUsername"><i class="fas fa-user-circle"></i> Username:</label>
+                        <input type="text" id="regUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail"><i class="fas fa-envelope"></i> Email Address:</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword"><i class="fas fa-lock"></i> Password:</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword"><i class="fas fa-lock"></i> Confirm Password:</label>
+                        <input type="password" id="regConfirmPassword" required>
+                    </div>
+                    <button type="submit" class="button" style="background-color:green;">Register</button>
+                </form>
+                <p style="margin-top: 20px;">
+                    Already a user? <a href="#" style="color: green; text-decoration: none; font-weight: bold;" id="showLogin">Login Here</a>
+                </p>
+                <p id="registerMessage" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Empowering India towards a cleaner, greener, self-reliant future. | &copy; 2025 Ecovision</p>
+        </div>
+    </footer>
+</body>
+</html>

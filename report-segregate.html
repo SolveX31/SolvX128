@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report & Segregate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* General Styles for the 'styles.css' that would make the page look good */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header and Nav Styles */
+        header {
+            background-color: #ffffff;
+            border-bottom: 3px solid #28a745;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            color: #28a745;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 0.8rem;
+            color: #555;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #28a745;
+            border-bottom: 2px solid #28a745;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none !important;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+            color: white !important;
+        }
+
+        /* Main Content and Form Styles */
+        main {
+            padding: 40px 0;
+        }
+
+        main h2 {
+            color: #28a745;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        main p {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .report-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #28a745;
+        }
+
+        .report-form input[type="text"],
+        .report-form select,
+        .report-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important for padding/width calculation */
+            transition: border-color 0.3s;
+        }
+
+        .report-form input[type="text"]:focus,
+        .report-form select:focus,
+        .report-form textarea:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+
+        .report-form textarea {
+            resize: vertical;
+        }
+        
+        /* Specific styling for the buttons below the form */
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .form-actions .button {
+            flex-grow: 1;
+            padding: 10px 15px;
+            font-size: 1.1em;
+        }
+
+        .track-button {
+            background-color: #ffc107; /* Warning color for tracking */
+            color: #333 !important;
+            border: none;
+        }
+
+        .track-button:hover {
+            background-color: #e0a800;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <div class="logo-container">
+                <img src="./ecovision.png" alt="Ecovision Logo">
+                <div>
+                    <h1>Ecovision</h1>
+                    <p class="tagline">Segregate Today, Sustain Tomorrow</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="report-segregate.html" class="active">Report & Segregate</a></li>
+                    <li><a href="login.html" class="button" style="background-color: green;">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Report Unsegregated Waste or Sanitation Issues 🚨</h2>
+        <p>Your report helps us deploy smart solutions and track local segregation compliance. **You earn 10 Eco-Points for every verified submission!**</p>
+
+        <form id="reportForm" class="report-form">
+            
+            <div class="form-group">
+                <label for="issueType">Type of Issue:</label>
+                <select id="issueType" required>
+                    <option value="">-- Select Category --</option>
+                    <option value="unsegregated_waste">Unsegregated Waste Dumping</option>
+                    <option value="full_dustbin">Smart Dustbin Alert: Full</option>
+                    <option value="sanitation_public">Public Sanitation/Toilet Issue</option>
+                    <option value="other">Other Environmental Issue</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location (Address/Landmark):</label>
+                <input type="text" id="location" placeholder="e.g., Near City Park Gate 3, Sector 14" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="imageUpload">Upload Proof (Image):</label>
+                <input type="file" id="imageUpload" accept="image/*">
+                <small style="color: #666;">Upload a clear photo for AI waste recognition (Recommended).</small>
+            </div>
+            <div id="imagePreview" style="margin-bottom: 15px; max-width: 200px; display: none;">
+                <img id="previewImage" src="#" alt="Image Preview" style="width: 100%; height: auto; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Detailed Description:</label>
+                <textarea id="description" rows="4" placeholder="Briefly describe the situation (e.g., mixed plastic and food waste, faulty IoT sensor, etc.)" required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="button" style="background-color: green;">Submit Report <i class="fas fa-paper-plane"></i></button>
+                <button type="button" id="trackButton" class="button track-button">Track Progress <i class="fas fa-search-location"></i></button>
+            </div>
+            <p id="formMessage" style="margin-top: 20px; font-weight: bold; text-align: left;"></p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Empowering India towards a cleaner, greener, self-reliant future. | &copy; 2025 Ecovision</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Image Preview and Form Submission/Tracking Alerts
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const reportForm = document.getElementById('reportForm');
+            const imageUpload = document.getElementById('imageUpload');
+            const previewImage = document.getElementById('previewImage');
+            const imagePreviewDiv = document.getElementById('imagePreview');
+            const formMessage = document.getElementById('formMessage');
+            const trackButton = document.getElementById('trackButton');
+
+            // --- 1. Image Preview Functionality ---
+            imageUpload.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImage.src = e.target.result;
+                        imagePreviewDiv.style.display = 'block';
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    previewImage.src = '#';
+                    imagePreviewDiv.style.display = 'none';
+                }
+            });
+
+            // --- 2. Form Submission Alert ---
+            reportForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Stop the form from actually submitting to a server
+                
+                // Simulate an API call success
+                formMessage.textContent = 'Report Submitted! Your tracking ID is: ECV-12345. Thank you for your service!';
+                formMessage.style.color = '#28a745';
+
+                // Optional: Clear the form fields after submission
+                reportForm.reset(); 
+                imagePreviewDiv.style.display = 'none';
+                
+                // Show a standard browser alert as well
+                alert('Report Submitted! You earned 10 Eco-Points. 🎉');
+            });
+
+            // --- 3. Track Progress Button Alert ---
+            trackButton.addEventListener('click', function() {
+                // Check if a report was actually submitted recently (optional, but good practice)
+                if (formMessage.textContent.includes('Submitted')) {
+                    alert('Your problem is uploaded and under review. We aim to resolve all high-priority issues within 24 hours. Thank you for your patience!');
+                } else {
+                     alert('Your problem is uploded and will be resolved soon. (This is a generic status, please submit a report first!)');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

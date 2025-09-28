@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ecovision</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Internal CSS for the visual elements */
+        
+        .image-container {
+            display: flex;
+            justify-content: center; 
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 400px; 
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Styling to make the sections stand out */
+        main.container section {
+            padding: 20px;
+            border-left: 5px solid #4CAF50;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        h2, h3 {
+            color: #2E7D32 !important;
+            border-bottom: 2px solid #A5D6A7;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        /* Ensure the main container is centered and has good padding */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+ 
+
+        /* --- NEW FLOATING BUTTON STYLE --- */
+        .shop-now-float {
+            position: fixed; /* Fixed position relative to the viewport */
+            bottom: 30px; /* 30px from the bottom edge */
+            right: 8px; /* 30px from the right edge */
+            z-index: 1000; /* Ensure it stays above other content */
+            padding: 15px 25px;
+            background-color: #007bff; /* Blue color */
+            color: white;
+            border: none;
+            border-radius: 30px; /* Pill shape */
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .shop-now-float:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Slight lift effect */
+        }
+        /* --------------------------------- */
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <div class="logo-container">
+                <img src="./ecovision.png" alt="Ecovision Logo">
+                <div>
+                    <h1>Ecovision</h1>
+                    <p class="tagline">Segregate Today, Sustain Tomorrow</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="report-segregate.html">Report & Segregate</a></li>
+                    <li><a href="login.html" class="button">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 style="text-align: center;">Ecovision: Swadeshi for Atmanirbhar Bharat 🇮🇳</h2>
+        <p style="font-style: italic; text-align: center; color: #777;">Problem Statement ID: 25128 - Student Innovation: Clean & Green Technology</p>
+        
+        <section>
+            <h3>Visualizing a Cleaner India</h3>
+            <p>Our work transforms polluted, neglected areas into clean, well-lit public spaces, embodying the true spirit of **Swachh Bharat**.</p>
+            <div class="image-container">
+                <img src="./conc.jpg" alt="Before and after image of garbage cleanup in a street">
+            </div>
+        </section>
+        
+        <section>
+            <h3 >Our Mission & Vision</h3>
+            <p>Ecovision is more than just a software solution; it is a commitment to the nation's mission of **Atmanirbhar Bharat** (self-sustained India). Our platform utilizes locally developed technology (**Swadeshi** principle) to tackle the pressing environmental challenges of urban and rural India.</p>
+            <p>We envision a future where waste is seen not as a liability, but as a resource, efficiently managed at the source through smart, scalable, and sustainable digital tools.</p>
+        </section>
+
+        <section>
+            <h3 >User-Friendly Segregation is Key 💡</h3>
+            <p>We eliminate the confusion around waste sorting, providing a clear, simple path for every citizen to become an active participant in sustainable waste management.</p>
+            <div class="image-container">
+                <img src="./conc1.jpg" alt="Visual aid for simple waste segregation steps">
+            </div>
+        </section>
+
+        <section>
+            <h3 >Why This Project Matters (The Impact)</h3>
+            <ul style="list-style-type: '🌱 '; margin-left: 20px;">
+                <li>**Public Health:** Proper segregation and sanitation directly mitigate health risks associated with untreated waste.</li>
+                <li>**Environmental Protection:** Diverting waste from landfills reduces greenhouse gas emissions and pollution.</li>
+                <li>**Economic Value:** Enables the efficient recycling of plastics and conversion of organic waste into valuable fertilizer.</li>
+                <li>**Alignment:** Supports the **Swachh Bharat Mission** and various **UN Sustainable Development Goals (SDGs)**.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 >The Team Behind the Vision</h3>
+            <p>A dedicated team of student innovators from **[Your College/University Name]** under the guidance of AICTE-MIC Student Innovation. We believe local problems require local, sustainable, and smart solutions.</p>
+        </section>
+        
+        <script src="scripts.js"></script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Empowering India towards a cleaner, greener, self-reliant future. | &copy; 2025 Ecovision</p>
+        </div>
+    </footer>
+
+    <a href="order.html" class="shop-now-float">
+        <i class="fas fa-cart-arrow-down"></i> Shop Now
+    </a>
+    </body>
+</html>
+```

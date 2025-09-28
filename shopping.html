@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecovision | Eco Rewards Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <style>
+        .reward-card {
+            /* Mimics a clean, elevated shopping card */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.3s;
+            height: 100%; /* Ensures all cards are the same height */
+            display: flex;
+            flex-direction: column;
+        }
+        .reward-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-color: #f7f7f7;
+            padding: 10px;
+        }
+        .card-body {
+            padding: 15px;
+            flex-grow: 1; /* Allows card body to fill space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-title {
+            color: #28a745;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .card-text {
+            color: #555;
+            font-size: 0.9em;
+        }
+        .points-cost {
+            font-size: 1.5rem;
+            color: #dc3545; /* Red for emphasis on cost/points */
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .current-points-banner {
+            background-color: #e6ffe6;
+            color: #28a745;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <div class="logo-container">
+                <img src="./ecovision.png" alt="Ecovision Logo">
+                <div>
+                    <h1>Ecovision</h1>
+                    <p class="tagline">Segregate Today, Sustain Tomorrow</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="report-segregate.html">Report & Segregate</a></li>
+                    <li><a href="login.html" class="button">Login / Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container" style="padding: 60px 0;">
+            <h2 style="color: #28a745; text-align: center; margin-bottom: 10px;">The Eco-Points Rewards Marketplace 🛒</h2>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">Spend your Eco-Points on essential tools for a sustainable home and garden!</p>
+
+            <div class="current-points-banner">
+                <i class="fas fa-coins"></i> Your Current Eco-Points: <span id="current-points">1250 Points</span>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./1.jpg" class="card-img-top" alt="Dual Compartment Dustbin">
+                        <div class="card-body">
+                            <h5 class="card-title">Dual-Bin Segregation Set</h5>
+                            <p class="card-text">High-quality, clearly marked bins (Green for Wet, Blue for Dry) to start segregation at home.</p>
+                            <div>
+                                <span class="points-cost">500 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./2.jpg" class="card-img-top" alt="Bag of Organic Manure">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Organic Manure</h5>
+                            <p class="card-text">A large bag of 100% organic, microbe-rich compost to nourish your plants naturally.</p>
+                            <div>
+                                <span class="points-cost">350 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./3.jpg" class="card-img-top" alt="Seeds and Plant Pots">
+                        <div class="card-body">
+                            <h5 class="card-title">Native Seeds & Recycled Pots</h5>
+                            <p class="card-text">Starter kit with 3 types of native plant seeds and 3 pots made from recycled plastic waste.</p>
+                            <div>
+                                <span class="points-cost">200 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./4.jpg" class="card-img-top" alt="Biodegradable Garbage Bags">
+                        <div class="card-body">
+                            <h5 class="card-title">Biodegradable Garbage Bags (Coupon)</h5>
+                            <p class="card-text">Coupon for a large pack of compostable and eco-friendly garbage disposal bags.</p>
+                            <div>
+                                <span class="points-cost">150 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./5.jpg" class="card-img-top" alt="Utility Bill Discount">
+                        <div class="card-body">
+                            <h5 class="card-title">PLANT POTS</h5>
+                            <p class="card-text">Direct discount voucher applicable on your next municipal water or electricity bill payment.</p>
+                            <div>
+                                <span class="points-cost">750 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./6.jpg" class="card-img-top" alt="Eco Club Membership">
+                        <div class="card-body">
+                            <h5 class="card-title">PLANT SEEDS</h5>
+                            <p class="card-text">Unlock exclusive workshops, resources, and partner discounts with your digital membership card.</p>
+                            <div>
+                                <span class="points-cost">1000 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./7.jpg" class="card-img-top" alt="Composting Guidebook">
+                        <div class="card-body">
+                            <h5 class="card-title">INDOOR PLANTS</h5>
+                            <p class="card-text">An in-depth eBook guide to managing kitchen waste and creating your own healthy manure.</p>
+                            <div>
+                                <span class="points-cost">50 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="card reward-card">
+                        <img src="./8.jpg" class="card-img-top" alt="Reusable Water Bottle">
+                        <div class="card-body">
+                            <h5 class="card-title">Ecovision Reusable Water Bottle</h5>
+                            <p class="card-text">A stylish, durable, stainless steel bottle to cut down on single-use plastic waste.</p>
+                            <div>
+                                <span class="points-cost">650 Points</span>
+                                <a href="#" class="btn btn-warning btn-sm add-to-cart" style="width: 100%; margin-bottom: 5px;"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm redeem-now" style="width: 100%; background-color: #28a745; border-color: #28a745;"><i class="fas fa-gift"></i> Redeem Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Empowering India towards a cleaner, greener, self-reliant future. | &copy; 2025 Ecovision</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all 'Add to Cart' buttons
+            const cartButtons = document.querySelectorAll('.add-to-cart');
+            
+            // Add click listener to each 'Add to Cart' button
+            cartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default link action (navigation)
+                    alert('Item added to cart successfully! 🛒');
+                });
+            });
+
+            // Get all 'Redeem Now' buttons
+            const redeemButtons = document.querySelectorAll('.redeem-now');
+            
+            // Add click listener to each 'Redeem Now' button
+            redeemButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default link action (navigation)
+                    // Get the item title from the card
+                    const cardBody = this.closest('.card-body');
+                    const title = cardBody.querySelector('.card-title').textContent;
+                    
+                    alert(`Points redeemed for "${title}"! Check your email for confirmation. 🎉`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
